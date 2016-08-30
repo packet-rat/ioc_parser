@@ -258,7 +258,7 @@ class Parser(object):
 				self.dedup_store = set()
 				
 			data = f.read()
-			soup = BeautifulSoup(data)
+			soup = BeautifulSoup(data,"lxml")
 			html = soup.findAll(text=True)
 
 			text = u''
